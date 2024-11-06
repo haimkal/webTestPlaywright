@@ -10,7 +10,8 @@ test("Second page", async ({ page }) => {
   await page.locator("#label_5_39_0").click();
   await page.locator("#input_5_1002").click();
   await page.locator("#input_5_1002").fill("12345");
-  await page.locator("#gform_next_button_5_44").click();
+  await page.waitForTimeout(2000);
+  await page.locator("a").filter({ hasText: "Next" }).click();
   await page.locator("#label_5_4_0").click();
   await page.locator("#label_5_41_1").click();
   await page.locator("#gform_next_button_5_14").click();
