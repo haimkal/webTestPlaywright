@@ -27,7 +27,7 @@ async function tryCheckLead(email) {
   if (registerDateFormatted !== today) {
     throw new Error("register_date is not today");
   }
-  if (jornayaLeadId) {
+  if (!jornayaLeadId) {
     throw new Error("jornaya_lead_id is missing or null");
   }
   if (!certUrl) {
